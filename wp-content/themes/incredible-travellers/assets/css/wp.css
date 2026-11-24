@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Incredible Travellers — WordPress layer on top of design.css
+   1. GeneratePress neutralisers   2. Block markup adapters
+   3. Header menus (mega cards, dropdowns)   4. Forms (Fluent Forms)
+   5. Inner pages (placeholder template)
+   ========================================================================== */
+
+/* 1. GeneratePress ------------------------------------------------------- */
+body{background:#fff;color:var(--ink);font-family:var(--ff-b);line-height:1.6}
+a:hover,a:focus,a:active{color:inherit}
+.it-front .site.grid-container,.it-front #page{max-width:none;padding:0;margin:0}
+.it-front .site-content{display:block;padding:0}
+button:hover,button:focus{background:inherit}
+.burger:hover,.burger:focus,.drawer__close:hover,.drawer__close:focus{background:#fff;color:var(--navy)}
+.nav__link:focus{background:var(--mist);color:var(--navy)}
+.car-btn:focus{background:#fff;color:var(--navy)}
+.car-btn:hover{background:var(--navy);color:#fff}
+.btn:focus{color:inherit}
+.btn-primary:focus,.btn-primary:hover{color:var(--navy)}
+.btn-navy:focus,.btn-navy:hover{color:#fff}
+.btn-outline:hover,.btn-outline:focus-visible{color:#fff}
+.btn-outline:focus:not(:focus-visible){color:var(--navy)}
+.btn-soft:hover,.btn-soft:focus{color:var(--navy)}
+.elig__btn:hover,.elig__btn:focus{background:linear-gradient(135deg,var(--saffron-lt),var(--saffron-deep));color:var(--navy)}
+.footer ul,.nap{margin:0}
+.utility .ph{white-space:nowrap}
+
+/* 2. Block markup adapters ---------------------------------------------- */
+.it-home .wp-block-image,.it-home figure{margin:0}
+.it-home .wp-block-image img{vertical-align:middle}
+.it-home .wp-block-group{box-sizing:border-box}
+p.eyebrow{display:inline-block;margin:0!important;font-size:.8rem!important;color:var(--teal)!important;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+p.eyebrow--light{color:var(--saffron)!important}
+.paid-card p.eyebrow{font-size:.78rem!important;letter-spacing:.1em}
+.sec-head p.eyebrow,.faq__intro p.eyebrow,.why__copy p.eyebrow,.book-card__info p.eyebrow{display:inline-block}
+p.badge{display:inline-flex}
+/* hero */
+.hero__media .hero__img{height:auto}
+.chip p{margin:0}
+.chip p strong{display:block;font-size:.92rem;color:var(--navy);line-height:1.25}
+.chip p small{display:block;font-size:.78rem;color:var(--muted)}
+.chip__icon{flex-shrink:0}
+/* stats */
+.stat .stat__num{font-family:var(--ff-h);font-size:2rem;font-weight:600;color:var(--saffron);display:inline-flex;align-items:center;gap:6px;line-height:1.2}
+.stat .stat__num .ic{width:22px;height:22px}
+.stat .stat__label{font-size:.92rem;color:#C9D3E3}
+@media (max-width:720px){.stat .stat__num{font-size:1.6rem}.stat .stat__label{font-size:.82rem}}
+/* services */
+.svc>.svc__text{color:var(--muted);font-size:.95rem;min-height:3.1em}
+.svc .ticks{margin:12px 0 2px}
+.svc__more>:not(summary){margin-top:0}
+/* destinations + guides: whole card clickable via the heading link */
+.dest,.guide{position:relative}
+.dest .dest__img,.guide .guide__img{margin:0}
+.dest .flag{margin:-28px 0 0 20px}
+.dest h3 a,.guide h3 a{color:inherit}
+.dest h3 a::after,.guide h3 a::after{content:"";position:absolute;inset:0;z-index:2}
+.dest:focus-within,.guide:focus-within{outline:3px solid var(--teal);outline-offset:2px}
+.dest h3 a:focus-visible,.guide h3 a:focus-visible{outline:0}
+.tags>p{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--mist);color:var(--navy);line-height:1.6}
+.dest__body .ph{font-size:.62rem;vertical-align:middle}
+.guide .meta{margin:0}
+.guide .guide__more{display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-weight:600;font-size:.95rem}
+.guide:hover .guide__more{gap:10px}
+/* steps */
+.steps>.step{list-style:none}
+.step .step__num{font-size:1.4rem;line-height:1}
+/* why */
+.why__note .ph{color:#FFD58A;background:rgba(244,166,42,.12);border-color:rgba(244,166,42,.5)}
+.proof--hi .ph{color:var(--navy);background:rgba(255,255,255,.45);border-color:rgba(11,37,69,.35)}
+.why__copy>.link{display:inline-flex}
+/* reviews */
+.gbadge p{margin:0}
+.gbadge .gbadge__g{display:grid}
+.gbadge strong{display:block;color:var(--navy)}
+.gbadge small{color:var(--muted);font-size:.78rem}
+.review>.review__quote{margin:0;font-size:1rem;color:#2C3547;line-height:1.6;flex:1}
+.review>.review__by{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+.review__by p{margin:0}
+.review__by strong{display:block;color:var(--navy);font-size:.95rem}
+.review__by small{color:var(--muted);font-size:.82rem}
+.review .avatar{flex-shrink:0;line-height:1}
+/* tools */
+.tool>.tool__text{flex:1}
+.tool__text p{color:var(--muted);font-size:.92rem}
+/* faq */
+.faq summary{list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq__intro>p:not(.eyebrow){color:var(--muted);margin-bottom:24px}
+/* booking */
+.book-card .ph{color:#FFD58A;background:rgba(244,166,42,.12);border-color:rgba(244,166,42,.5)}
+.book-card__info>.book-card__lead{font-size:1.05rem;margin-bottom:24px}
+.book-list li{display:flex;align-items:center;gap:12px}
+.book-form .ph{color:#9A5B00;background:var(--cream);border-color:#E3B45C}
+.book-form>h3{font-size:1.4rem;margin-bottom:18px}
+.paid-card__body>.paid-card__text{color:#3D4759;max-width:640px;margin-bottom:18px}
+.paid-card__head p{margin:0}
+.paid-card__head .paid-tag{margin:0}
+.paid-card__meta{margin:0 0 22px}
+
+/* 3. Header menus -------------------------------------------------------- */
+.nav__item{position:relative}
+.nav__item.has-mega{position:static}
+.nav__link .ic-sm{transition:transform .2s}
+.has-mega:hover>.nav__link .ic-sm,.has-drop:hover>.nav__link .ic-sm{transform:rotate(180deg)}
+.nav__item.is-current>.nav__link{color:var(--teal)}
+.header__row{position:relative}
+.mega__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 14px}
+.mega--flags .mega__cards{grid-template-columns:repeat(3,1fr)}
+.mega--cards{width:min(980px,calc(100vw - 48px));padding:22px 22px 0}
+.mega--cards:not(:has(.mega__foot)){padding-bottom:22px}
+.mega__card{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:var(--ink)}
+.mega__card:hover,.mega__card:focus{background:var(--sand);color:var(--navy)}
+.mega__card strong{display:block;font-family:var(--ff-h);font-weight:600;color:var(--navy);font-size:1rem;line-height:1.25}
+.mega__card small{display:block;color:var(--muted);font-size:.8rem;line-height:1.35}
+.mega__card img{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px var(--line);flex-shrink:0}
+.mega__card .tile-sm{flex-shrink:0}
+.mega .mega__foot{margin:18px -22px 0;padding:14px 22px}
+.drop{position:absolute;left:0;top:100%;min-width:230px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh-2);padding:10px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:60}
+.has-drop:hover .drop,.has-drop:focus-within .drop,.has-drop.open .drop{opacity:1;visibility:visible;transform:none}
+.drop a{padding:9px 12px;border-radius:10px;font-size:.93rem;color:var(--ink)}
+.drop a:hover,.drop a:focus{background:var(--sand);color:var(--navy)}
+.has-mega::after,.has-drop::after{content:"";position:absolute;left:0;right:0;top:100%;height:14px}
+.drawer__acc summary img{width:28px;height:28px;border-radius:50%}
+
+/* 4. Forms: Fluent Forms styled as the design's call-back form ----------- */
+.book-form .fluentform .ff-el-group{margin-bottom:14px}
+.book-form .fluentform .ff-t-container{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.book-form .fluentform .ff-t-cell{width:auto!important;padding:0!important;flex:none}
+.book-form .fluentform .ff-t-cell .ff-el-group{margin-bottom:0}
+.book-form .fluentform .ff-el-input--label{margin-bottom:6px}
+.book-form .fluentform .ff-el-input--label label{font-size:.8rem;font-weight:600;color:var(--navy);margin:0}
+.book-form .fluentform .ff-el-is-required.asterisk-right label:after{color:var(--saffron-deep)}
+.book-form .fluentform .ff-el-form-control{width:100%;height:48px;border:1.5px solid var(--line);border-radius:var(--r-sm);padding:0 14px;background:#fff;color:var(--ink);font-size:.95rem;box-shadow:none}
+.book-form .fluentform select.ff-el-form-control{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B2545' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 12px center/16px no-repeat;padding-right:34px}
+.book-form .fluentform .ff-el-form-control:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(14,124,134,.15)}
+.book-form .fluentform .ff-el-tc label.ff_tc_label{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted);line-height:1.45;font-weight:400}
+.book-form .fluentform .ff-el-tc .ff_tc_checkbox{padding-top:3px}
+.book-form .fluentform .ff-el-tc input{accent-color:var(--teal);margin:0}
+.book-form .fluentform .ff_tc_label a{color:var(--teal);text-decoration:underline}
+.book-form .fluentform .ff_submit_btn_wrapper{margin:0}
+.book-form .fluentform .ff-btn-submit,.book-form .fluentform .ff-btn-submit:hover,.book-form .fluentform .ff-btn-submit:focus{width:100%;height:48px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;border:0;padding:0 22px;font-weight:600;font-size:.95rem;background:linear-gradient(135deg,var(--saffron-lt),var(--saffron-deep))!important;color:var(--navy)!important;box-shadow:var(--sh-glow);opacity:1}
+.book-form .fluentform .ff-btn-submit::after{content:"";width:18px;height:18px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat}
+.book-form .fluentform .ff-btn-submit:hover{transform:translateY(-1px)}
+.book-form .ff-message-success{border-radius:12px;border:1px solid var(--line);background:var(--sand);color:var(--navy);box-shadow:none}
+.book-form>.small{margin-top:12px;text-align:center}
+@media (max-width:720px){.book-form .fluentform .ff-t-container{grid-template-columns:1fr}}
+
+/* 5. Inner pages --------------------------------------------------------- */
+body:not(.it-front) .site-content{padding:56px 24px 96px}
+body:not(.it-front) .inside-article{padding:0}
+body:not(.it-front) .entry-title{font-family:var(--ff-h);color:var(--navy);font-size:clamp(2rem,3.6vw,3rem);line-height:1.1;margin-bottom:18px}
+body:not(.it-front) .entry-content{font-size:1.05rem;color:#3D4759}
+body:not(.it-front) .entry-content h2{font-size:clamp(1.5rem,2.4vw,2rem);margin:1.4em 0 .5em}
+body:not(.it-front) .entry-content a:not(.btn){color:var(--teal);text-decoration:underline}
+.it-soon{background:var(--sand);border:1px solid var(--line);border-radius:20px;padding:28px 30px;max-width:760px}
+.it-soon .eyebrow{display:block;margin-bottom:8px!important}
+.it-soon>p:not(.eyebrow){margin-bottom:18px}
+.it-soon .it-soon__actions{display:flex;flex-wrap:wrap;gap:12px}
+.separate-containers .inside-article,.separate-containers .site-main{margin:0;padding:0;background:none}
+
+/* Specificity fixes where the design used <span>/<strong> and blocks use <p> */
+.step p.step__num{color:#fff;font-size:1.4rem;max-width:none;margin:0 auto 18px;line-height:1}
+.step:first-child p.step__num{color:var(--navy)}
+@media (max-width:720px){.step p.step__num{margin:0}}
+
+/* Fluent Forms: 2-column grid like the design */
+.book-form .fluentform fieldset{display:grid!important;grid-template-columns:1fr 1fr;gap:14px}
+.book-form .fluentform fieldset>.ff-el-group{margin:0!important}
+.book-form .fluentform fieldset>.ff-el-group:has(.ff-el-tc),.book-form .fluentform fieldset>.ff_submit_btn_wrapper,.book-form .fluentform fieldset>.ff-message-success,.book-form .fluentform fieldset>.ff-errors-in-stack{grid-column:1/-1}
+.book-form .fluentform fieldset>.ff-el-group:has(.ff-el-tc){margin:0 0 2px!important}
+.book-form .fluentform .ff-el-input--label{padding:0!important;margin:0 0 6px!important;line-height:1.3}
+.book-form .fluentform .ff-el-input--label label{font-size:.8rem!important;font-weight:600!important;color:var(--navy)!important}
+.book-form .fluentform .ff-el-is-required.asterisk-right label:after{content:""!important;margin:0!important}
+.book-form .fluentform .ff-el-form-control{height:48px!important;padding:0 14px!important;border:1.5px solid var(--line)!important;border-radius:var(--r-sm)!important;font-size:.95rem!important;line-height:1.4!important;color:var(--ink)}
+.book-form .fluentform select.ff-el-form-control{padding-right:34px!important}
+.book-form .fluentform .ff-el-form-control::placeholder{color:#8A93A5}
+.book-form .fluentform .ff-el-tc label.ff_tc_label{margin:0;padding:0}
+.book-form .fluentform .ff_t_c{padding:0;margin:0}
+.book-form .fluentform .ff-el-form-check-input{width:auto;height:auto}
+@media (max-width:720px){.book-form .fluentform fieldset{grid-template-columns:1fr}}
+.book-form .fluentform .ff-el-input--label label{display:block!important;line-height:1.6!important}
+.book-form .fluentform .ff-el-input--label{margin:0 0 6px!important;line-height:1}
+.book-form .fluentform .ff-el-input--content{line-height:1}
+.drawer__panel>*{flex-shrink:0}
+.it-soon__actions{align-items:center}
