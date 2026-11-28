@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" width="36" height="24">
+  <rect width="36" height="24" fill="#FFF"/>
+  <g transform="translate(18,12)">
+    <path d="M0-6 A6 6 0 0 1 0 6 A3 3 0 0 1 0 0 A3 3 0 0 0 0-6 Z" fill="#CD2E3A"/>
+    <path d="M0 6 A6 6 0 0 1 0-6 A3 3 0 0 1 0 0 A3 3 0 0 0 0 6 Z" fill="#0047A0"/>
+  </g>
+  <!-- trigrams as three bars, rotated -->
+  <g stroke="#000" stroke-width="1.15" fill="none" stroke-linecap="butt">
+    <!-- geon, upper left, three solid -->
+    <g transform="translate(8.2,5.2) rotate(-56)">
+      <path d="M-3.3-2.2h6.6M-3.3 0h6.6M-3.3 2.2h6.6"/>
+    </g>
+    <!-- ri, upper right, broken middle -->
+    <g transform="translate(27.8,5.2) rotate(56)">
+      <path d="M-3.3-2.2h6.6M-3.3 0h2.5M.8 0h2.5M-3.3 2.2h6.6"/>
+    </g>
+    <!-- gam, lower left -->
+    <g transform="translate(8.2,18.8) rotate(56)">
+      <path d="M-3.3-2.2h2.5M.8-2.2h2.5M-3.3 0h6.6M-3.3 2.2h2.5M.8 2.2h2.5"/>
+    </g>
+    <!-- gon, lower right, three broken -->
+    <g transform="translate(27.8,18.8) rotate(-56)">
+      <path d="M-3.3-2.2h2.5M.8-2.2h2.5M-3.3 0h2.5M.8 0h2.5M-3.3 2.2h2.5M.8 2.2h2.5"/>
+    </g>
+  </g>
+</svg>
